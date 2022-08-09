@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+      integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+      crossorigin="anonymous"
+    />
+    <style>
+      .comp-container {
+        display: flex;
+        margin: 1em;
+      }
+      .comp-group {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        padding: 0.5em;
+      }
+      :root {
+        --csdemo-uv-index-value-font-size: 36px;
+        --csdemo-uv-index-description-font-size: 24px;
+      }
+    </style>
+    <script type="module" src="/build/csdemoweather.esm.js"></script>
+    <script nomodule src="/build/csdemoweather.js"></script>
+  </head>
+
+  <body>
+    <h1>Weather Widgets</h1>
+    <div class="comp-container">
+      <div class="comp-group">
+        <h2>Temperature</h2>
+        <csdemo-temperature temperature="273.15" scale="C"></csdemo-temperature>
+
+        <p>Event Listener on csdemoChange</p>
+        <p>Current Temperature in Kelvin: <span id="currentTemperature"></span></p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const temperature = document.querySelector('csdemo-temperature');
+      const curTempSpan = document.getElementById('currentTemperature');
+      curTempSpan.innerHTML = '273.15';
+      temperature.addEventListener('csdemoChange', (event) => {
+        let curTemp = event.detail.value;
+        console.log(curTemp);
+        curTempSpan.innerHTML = curTemp;
+      });
+    </script>
+  </body>
+</html>

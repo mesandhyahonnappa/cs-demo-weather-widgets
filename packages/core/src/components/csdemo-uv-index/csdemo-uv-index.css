@@ -1,0 +1,38 @@
+:host {
+  align-self: stretch;
+}
+.uv-index-container {
+  align-items: center;
+  display: inline-flex;
+}
+
+.value {
+  font-size: var(--csdemo-uv-index-value-font-size);
+  font-weight: var(--csdemo-uv-index-value-font-weight);
+}
+
+.description {
+  font-size: var(--csdemo-uv-index-description-font-size);
+  font-weight: var(--csdemo-uv-index-description-font-weight);
+  margin-left: 0.5em;
+}
+
+.low-risk {
+  color: #4f912a;
+}
+
+.moderate-risk {
+  color: #f5e24d;
+}
+
+.high-risk {
+  color: #e5632b;
+}
+
+.very-high-risk {
+  color: #c52a2a;
+}
+
+.extreme-risk {
+  color: #6350c1;
+}

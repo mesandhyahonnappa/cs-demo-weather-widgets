@@ -1,0 +1,6 @@
+packages/core/src/components.d.ts
+packages/core/src/components/**/readme.md
+packages/angular
+packages/react
+packages/vue
+pnpm-lock.yaml

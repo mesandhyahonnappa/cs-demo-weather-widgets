@@ -1,0 +1,15 @@
+.condition-container {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.condition-image img {
+  height: var(--csdemo-condition-image-height);
+}
+
+.condition-label {
+  font-size: var(--csdemo-condition-label-font-size);
+  font-weight: var(--csdemo-condition-label-font-weight);
+}

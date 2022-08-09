@@ -1,0 +1,62 @@
+{
+  "name": "@ionic-enterprise/cs-demo-weather-widgets-react",
+  "version": "3.0.0",
+  "description": "React specific proxies for @ionic-enterprise/cs-demo-weather-widgets",
+  "author": "Ionic Customer Success <support@ionic.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-enterprise/cs-demo-weather-widgets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-enterprise/cs-demo-weather-widgets"
+  },
+  "homepage": "https://github.com/ionic-enterprise/cs-demo-weather-widgets",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist && rimraf dist-transpiled",
+    "compile": "npm run tsc && rollup -c",
+    "tsc": "tsc -p ."
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "~13.2.1",
+    "@types/jest": "23.3.9",
+    "@types/node": "^15.12.2",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "jest": "^23.0.0",
+    "jest-dom": "^3.0.2",
+    "np": "^3.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "~3.0.2",
+    "rollup": "~2.70.2",
+    "rollup-plugin-sourcemaps": "~0.6.3",
+    "typescript": "^3.3.4000"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "dist"
+    ]
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ionic-enterprise/cs-demo-weather-widgets": "workspace:^3.0.0"
+  }
+}
