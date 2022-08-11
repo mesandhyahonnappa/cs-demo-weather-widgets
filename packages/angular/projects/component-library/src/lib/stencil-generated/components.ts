@@ -52,6 +52,8 @@ export class CsdemoDailyForecast {
   }
 }
 //Issue: Types being referenced from wrong location.
+//import type { TemperatureChangeEventDetail as IcsdemoTemperatureTemperatureChangeEventDetail } from '@ionic-enterprise/cs-demo-weather-widgets/components';
+
 // Updated this manually to fix the issue and build.
 import type { TemperatureChangeEventDetail as IcsdemoTemperatureTemperatureChangeEventDetail } from '@ionic-enterprise/cs-demo-weather-widgets';
 export declare interface CsdemoTemperature extends Components.CsdemoTemperature {
