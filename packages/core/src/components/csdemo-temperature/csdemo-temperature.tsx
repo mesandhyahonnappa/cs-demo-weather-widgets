@@ -41,7 +41,7 @@ export class csdemoTemperature {
   }
 
   private stepUpTemperature = () => {
-    this.temperature++;
+    this.temperature = this.temperature + 1;
     this.setDisplayTemperature();
     this.csdemoChange.emit({ value: this.temperature.toString() });
   };
