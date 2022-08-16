@@ -1,8 +1,15 @@
 import { Config } from '@stencil/core';
-import { angularOutputTarget as angular } from '@stencil/angular-output-target';
+import { angularOutputTarget as angular, ValueAccessorConfig } from '@stencil/angular-output-target';
 import { reactOutputTarget as react } from '@stencil/react-output-target';
 import { vueOutputTarget as vue } from '@stencil/vue-output-target';
-
+const angularValueAccessorBindings: ValueAccessorConfig[] = [
+  {
+    elementSelectors: ['csdemo-temperature'],
+    event: 'csdemoChange',
+    targetAttr: 'temperature',
+    type: 'number',
+  },
+];
 export const config: Config = {
   namespace: 'csdemoweather',
   outputTargets: [
@@ -11,6 +18,7 @@ export const config: Config = {
       directivesProxyFile: '../angular/projects/component-library/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular/projects/component-library/src/lib/stencil-generated/index.ts',
       includeImportCustomElements: true,
+      valueAccessorConfigs: angularValueAccessorBindings,
     }),
     react({
       componentCorePackage: '@ionic-enterprise/cs-demo-weather-widgets',
